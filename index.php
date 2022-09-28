@@ -32,6 +32,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT CourseID, prefix,number, description from Course";
+$sql "SELECT instructor_id, instructor_name from instructor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -55,6 +56,12 @@ $conn->close();
       <th>Instructor id</th>
       <th>Instructor name</th>
 </tr>
+<tr>
+    <td><?=$row["CourseID"]?></td>
+    <td><?=$row["prefix"]?></td>
+     <td><?=$row["number"]?></td>
+     <td><?=$row["description"]?></td>
+  </tr>
 </tbody>
     </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
