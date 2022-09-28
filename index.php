@@ -57,10 +57,8 @@ $conn->close();
       <th>Instructor name</th>
 </tr>
 <tr>
-    <td><?=$row["CourseID"]?></td>
-    <td><?=$row["prefix"]?></td>
-     <td><?=$row["number"]?></td>
-     <td><?=$row["description"]?></td>
+    <td><?=$row["instructor_id"]?></td>
+    <td><?=$row["instructor_name"]?></td>
   </tr>
 </tbody>
     </table>
