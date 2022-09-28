@@ -52,8 +52,8 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 <tr>
-      <th>CourseID</th>
-      <th>prefix</th>
+      <th>Instructor id</th>
+      <th>Instructor name</th>
 </tr>
 </tbody>
     </table>
