@@ -32,7 +32,6 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT CourseID, prefix,number, description from Course";
-$sql "SELECT instructor_id, instructor_name from instructor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
