@@ -42,11 +42,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["CourseID"]?></td>
     <td><?=$row["prefix"]?></td>
      <td><?=$row["number"]?></td>
-     <td><?=$row["description"]?>
-          <form method="post" action="course-section.php">
-        <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
-        <input type="submit" value="Sections" />
-      </form></td>
+     <td><?=$row["description"]?></td>
   </tr>
 <?php
   }
