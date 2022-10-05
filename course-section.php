@@ -58,7 +58,7 @@ $conn->close();
 ?>
   </tbody>
     </table>
-    <form method="post" action="instructors.php">
+    <form method="post" action="instructors-course.php">
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
         <input type="submit" value="Click here for information on professors" />
       </form>
