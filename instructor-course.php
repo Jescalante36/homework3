@@ -33,7 +33,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "SELECT instructor_name, instructor_id, c.number, c.prefix, c.description from Course c join instructor i on i.CourseID = c.CourseID"; //where i.instructor_id=" . $iid;
+$sql = "SELECT instructor_id, instructor_name, c.number, c.prefix, c.description from Course c join instructor i on c.CourseID = i.CourseID"; //where i.instructor_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
@@ -42,8 +42,8 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["instructor_name"]?></td>
     <td><?=$row["instructor_id"]?></td>
+    <td><?=$row["instructor_name"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["prefix"]?></td>
     <td><?=$row["description"]?></td>
