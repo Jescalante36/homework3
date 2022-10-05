@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
     <?php
 $servername = "localhost";
 $username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
+$password = "Angelito54321&";
 $dbname = "projecto_homework3";
 
 // Create connection
