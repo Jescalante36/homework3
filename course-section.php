@@ -60,7 +60,7 @@ $conn->close();
     </table>
     <form method="post" action="instructor-course.php">
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
-        <input type="submit" value="Click here for information on professors" />
+        <input type="submit" value="Click here for information on instructors" />
       </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
