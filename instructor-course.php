@@ -11,11 +11,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Name</th>
       <th>ID</th>
-      <th>Prefix</th>
       <th>Number</th>
-      <th>Section</th>
-      <th>Instructor</th>
+      <th>prefix</th>
+      <th>description</th>
     </tr>
   </thead>
   <tbody>
@@ -33,7 +33,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "SELECT section_id, section_number, i.instructor_name, c.prefix, c.number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID"; //where i.instructor_id=" . $iid;
+$sql = "SELECT instructor_name, instructor_id, c.number, c.prefix, c.description from Instructor i join Course c on C.CourseID = i.CourseID"; //where i.instructor_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
@@ -42,11 +42,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["instructor_id"]?></td>
+    <td><?=$row["number"]?></td>
+    <td><?=$row["prefix"]?></td>
+    <td><?=$row["description"]?></td>
   </tr>
 <?php
   }
