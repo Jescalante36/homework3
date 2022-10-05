@@ -11,8 +11,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Camous ID</th>
-      <th>Camous Name</th>
+      <th>Course ID</th>
+      <th>Campus ID</th>
+      <th>Campus Name</th>
       <th></th>
     </tr>
   </thead>
@@ -30,7 +31,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT CampusID, Campus_Name from Campus";
+$sql = "SELECT CampusID, Campus_Name,C.Course from Campus ca join Course c on c.CourseId = ca.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,13 +39,10 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
+    <td><?=$row["CourseID"]?></td>
     <td><?=$row["CampusID"]?></td>
     <td><?=$row["Campus_Name"]?></td>
     <td>
-      <form method="post" action="course-section.php">
-        <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
-        <input type="submit" value="Sections" />
-      </form>
     </td>
   </tr>
 <?php
