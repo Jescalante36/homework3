@@ -21,9 +21,9 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "jescalan_homework3";
+$password = "Angelito54321&";
+$dbname = "jescalan_homework3";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,7 +33,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $iid;
+$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID where i.instructor_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
