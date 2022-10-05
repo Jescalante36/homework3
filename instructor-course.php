@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Sections</h1>
+    <h1>Instructor Information</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -33,7 +33,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "SELECT instructor_name, instructor_id, c.number, c.prefix, c.description from Instructor i join Course c on i.CourseID = c.CourseID"; //where i.instructor_id=" . $iid;
+$sql = "SELECT instructor_name, instructor_id, c.number, c.prefix, c.description from Course c join instructor i on i.CourseID = c.CourseID"; //where i.instructor_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
