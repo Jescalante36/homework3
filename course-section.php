@@ -62,7 +62,7 @@ $conn->close();
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
         <input type="submit" value="Click here for information on instructors" />
       </form>
-       <form method="post" action="Campuses.php">
+       <form method="post" action="Campus.php">
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
         <input type="submit" value="Click here to see different campuses" />
       </form>
