@@ -33,7 +33,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "SELECT instructor_id, instructor_name, c.number, c.prefix, c.description from Course c join instructor i on c.CourseID = i.CourseID"; //where i.instructor_id=" . $iid;
+$sql = "SELECT instructor_id, instructor_name, c.number, c.prefix, c.description from instructor i join Sections s on s.instructor_id = i.instructor_id join Course c on c.CourseID= s.CourseID"; //where i.instructor_id=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
