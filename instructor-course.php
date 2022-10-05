@@ -11,8 +11,8 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Instructor ID</th>
       <th>Name</th>
-      <th>ID</th>
       <th>Number</th>
       <th>prefix</th>
       <th>description</th>
