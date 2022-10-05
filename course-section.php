@@ -48,11 +48,11 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
-    <form method="post" action="instructors.php">
+        </tr>
+        <form method="post" action="instructors.php">
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
         <input type="submit" value="Click for more information on this professor" />
       </form>
-        </tr>
 <?php
   }
 } else {
