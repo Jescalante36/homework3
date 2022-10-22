@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instructors</title>
+    <title>Courses</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Instructors</h1>
+    <h1>Courses</h1>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Name</th>
+      <th>Prefix</th>
+      <th>Number</th>
+      <th>Description</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -29,7 +32,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT * from Course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -37,8 +40,16 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["instructor_id"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["CourseID"]?></td>
+    <td><?=$row["prefix"]?></td>
+    <td><?=$row["number"]?></td>
+    <td><?=$row["description"]?></td>
+    <td>
+      <form method="post" action="course-section.php">
+        <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
+        <input type="submit" value="Sections" />
+      </form>
+    </td>
   </tr>
 <?php
   }
