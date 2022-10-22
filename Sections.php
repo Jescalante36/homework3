@@ -12,9 +12,9 @@
   <thead>
     <tr>
       <th>CourseID</th>
-      <th>section_number</th>
-      <th>instructor_id</th>
-      <th>section_number</th>
+      <th>Section id</th>
+      <th>Instructor id</th>
+      <th>Section number</th>
       <th></th>
     </tr>
   </thead>
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select CourseID, section_number, i.instructor_id, c.section_number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
+$sql = "SELECT CourseID, section_number, i.instructor_id, c.section_number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
