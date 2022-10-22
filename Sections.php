@@ -33,7 +33,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select CourseID, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id";
+$sql = "select CourseID, section_number, i.instructor_name, c.prefix, c.number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
