@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["course_id"]?></td>
+    <td><?=$row["CourseID"]?></td>
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
