@@ -44,6 +44,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
+    <td><?=$row["CampusID"]?></td>
     <td>
       <form method="post" action="course-section.php">
         <input type="hidden" name="id" value="<?=$row["CourseID"]?>" />
