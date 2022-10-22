@@ -11,11 +11,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Section</th>
-      <th>Instructor</th>
+      <th>CourseID</th>
+      <th>section_number</th>
+      <th>instructor_id</th>
+      <th>section_number</th>
       <th></th>
     </tr>
   </thead>
