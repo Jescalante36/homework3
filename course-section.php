@@ -47,6 +47,12 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
+    <td>
+      <form method="post" action="instructors-section.php">
+        <input type="hidden" name="id" value="<?=$row["instructor_name"]?>" />
+        <input type="submit" value="Sections" />
+      </form>
+    </td>
   </tr>
 <?php
   }
