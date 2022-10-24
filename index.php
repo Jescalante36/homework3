@@ -15,7 +15,7 @@
       <th>Prefix</th>
       <th>Number</th>
       <th>Description</th>
-      <th>Campus</th>
+      <th>sections</th>
       <th></th>
     </tr>
   </thead>
