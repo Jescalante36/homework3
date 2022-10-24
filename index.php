@@ -33,7 +33,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $cid = $_POST['id'];
-$sql = "SELECT CourseID, prefix, number, description, m.Campus_Name From Course c join Campus m on m.CourseID = c.CourseID where c.CourseID =" . $cid;
+$sql = "SELECT CourseID, prefix, number, description, m.Campus_Name From Campus m join Course c on c.CourseID = m.CourseID where c.CourseID =" . $cid;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
