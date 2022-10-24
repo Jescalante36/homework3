@@ -31,9 +31,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$cid = $_POST['id'];
 //echo $iid;
-$sql = "SELECT section_id, section_number, i.instructor_name, c.prefix, c.number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID where c.CourseID=" . $cid;
+$sql = "SELECT section_id, section_number, i.instructor_name, c.prefix, c.number from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
 //echo $sql;
     $result = $conn->query($sql);
 
