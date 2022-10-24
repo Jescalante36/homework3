@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT CampusID, Campus_Name, c.CourseID from Campus m join Course c on c.CourseID = m.CourseID";
+$sql = "SELECT CampusID, Campus_Name from Campus";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
