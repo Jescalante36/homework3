@@ -13,7 +13,6 @@
     <tr>
       <th>Campus ID</th>
       <th>Campus Name</th>
-      <th>Course ID</th>
     </tr>
   </thead>
   <tbody>
@@ -40,7 +39,6 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["CampusID"]?></td>
     <td><?=$row["Campus_Name"]?></td>
-    <td><?=$row["CourseID"]?></td>
   </tr>
 <?php
   }
