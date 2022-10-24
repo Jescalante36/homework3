@@ -32,7 +32,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT CourseID, prefix, number, description, m.Campus_Name From Campus m join Course c on c.CampusID = m.CampusID";
+$sql = "SELECT CourseID, prefix, number, description From Course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
