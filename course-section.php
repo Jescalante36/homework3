@@ -46,12 +46,6 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
-    <td>
-      <form method="post" action="instructor-cards.php">
-        <input type="hidden" name="id" value="<?=$row["instructor_name"]?>" />
-        <input type="submit" value="More Information on the instructors" />
-      </form>
-    </td>
   </tr>
 <?php
   }
