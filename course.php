@@ -32,7 +32,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT CourseID, instructor_id, number, Section From Course";
+$sql = "SELECT CourseID, CampusID, number, prefix From Course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -41,8 +41,8 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["CourseID"]?></td>
-    <td><a href="instructors.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_id"]?></a></td>
-    <td><?=$row["number"]."-"?><?=$row["Section"]?></td>
+    <td><a href="instructors.php?id=<?=$row["CampusID"]?>"><?=$row["CampusID"]?></a></td>
+    <td><?=$row["number"]."-"?><?=$row["prefix"]?></td>
   </tr>
 <?php
   }
