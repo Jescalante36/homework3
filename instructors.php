@@ -29,8 +29,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iid = $_GET['id'];
-$sql = "SELECT instructor_id, instructor_name from instructor" .$iid;
+$sql = "SELECT instructor_id, instructor_name from instructor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
