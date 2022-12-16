@@ -23,7 +23,7 @@
           <a class="nav-link" href="./instructors.php">Instructors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Sections.php">Courses</a>
+          <a class="nav-link" href="./Sections.php">Sections</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./Campus.php">Campus</a>
