@@ -16,10 +16,10 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "asoltiso_asoltis";
-$password = "OUcreate!";
-$dbname = "asoltiso_homework3";
-
+$username = "jescalan_homework3";
+$password = "Angelito54321&";
+$dbname = "jescalan_homework3";
+    
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
