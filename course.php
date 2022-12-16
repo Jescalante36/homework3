@@ -13,7 +13,7 @@
     <tr>
       <th>ID</th>
       <th>CampusID</th>
-      <th>Number</th>
+      <th>Number-Class</th>
     </tr>
   </thead>
   <tbody>
