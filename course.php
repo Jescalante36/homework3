@@ -12,10 +12,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Prefix</th>
+      <th>CampusID</th>
       <th>Number</th>
-      <th>Description</th>
-      <th>sections</th>
       <th></th>
     </tr>
   </thead>
