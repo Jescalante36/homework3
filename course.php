@@ -14,7 +14,6 @@
       <th>ID</th>
       <th>CampusID</th>
       <th>Number</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
