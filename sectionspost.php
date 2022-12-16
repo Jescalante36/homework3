@@ -7,10 +7,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>CarID</th>
-      <th>Color</th>
-      <th>Make</th>
-      <th>Year</th>
+    <th>ID</th>
+      <th>Prefix</th>
+      <th>Number</th>
+      <th>Section</th>
+      <th>Instructor</th>
     </tr>
   </thead>
   <tbody>
