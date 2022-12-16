@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./index.php">Home</a>
+          <a class="nav-link" href="./course.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./instructors.php">Instructors</a>
@@ -26,7 +26,7 @@
           <a class="nav-link" href="./Sections.php">Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Campus.php">Bird</a>
+          <a class="nav-link" href="./Campus.php">Campus</a>
         </li>
       </ul>
     </div>
