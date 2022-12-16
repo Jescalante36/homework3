@@ -11,11 +11,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>CourseID</th>
-      <th>Section id</th>
-      <th>Instructor id</th>
-      <th>Section number</th>
-      <th></th>
+      <th>ID</th>
+      <th>Prefix</th>
+      <th>Number</th>
+      <th>Section</th>
+      <th>Instructor</th>
     </tr>
   </thead>
   <tbody>
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT section_id, section_number, i.instructor_id,c.CourseID from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
+$sql = "SELECT section_id, section_number, i.instructor_name,c.prefix from Sections s join instructor i on i.instructor_id = s.instructor_id join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -40,10 +40,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["CourseID"]?></td>
-    <td><?=$row["instructor_id"]?></td>
-    <td><?=$row["section_id"]?></td>
+     <td><?=$row["section_id"]?></td>
+    <td><?=$row["prefix"]?></td>
+    <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
+    <td><?=$row["instructor_name"]?></td>
     <td>
       <form method="post" action="section-edit.php">
         <input type="hidden" name="id" value="<?=$row["section_id"]?>">
