@@ -8,10 +8,7 @@
   <thead>
     <tr>
     <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
       <th>Section</th>
-      <th>Instructor</th>
     </tr>
   </thead>
   <tbody>
@@ -39,10 +36,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
      <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
-    <td><?=$row["instructor_name"]?></td>
   </tr>
 <?php
   }
